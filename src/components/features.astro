@@ -1,56 +1,68 @@
 ---
 // @ts-ignore
+import Contact from "@pages/contact.astro";
 import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Parkování zdarma",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Zapomeňte na stres z hledání parkovacího místa. U nás máte možnost využít zdarma parkování v naší moderní kryté podzemní garáži.",
+    icon: "bx:bxs-car-garage",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Pěší turistika",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "U nás můžete objevovat krásné pěší turistické trasy přímo z našeho místa a prožít nezapomenutelná dobrodružství v Krkonoších",
+    icon: "ic:twotone-hiking",
   },
   {
-    title: "On-Demand Components",
+    title: "Lyžování",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Zažijte dokonalý zimní únik na horách. Naše lokalita je ideálním výchozím bodem pro váš lyžařský dovolený, s blízkým přístupem k sjezdovkám a zimnímu dobrodružství.",
+    icon: "ic:outline-downhill-skiing",
   },
   {
-    title: "Broad Integration",
+    title: "Balkon",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Užijte si svůj pobyt na plno s balkonem, který nabízí úchvatné výhledy na okolní přírodu a horizont.",
+    icon: "ic:outline-balcony",
   },
   {
-    title: "SEO Enabled",
+    title: "Wi-Fi zdarma",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Během vašeho pobytu si můžete vychutnávat krásy přírody a zároveň zůstat připojeni k internetu díky naší zcela zdarma dostupné Wi-Fi síti.",
+    icon: "ic:twotone-wifi",
   },
   {
-    title: "Community",
+    title: "Nekuřácké pokoje",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Vaše pohodlí a zdraví jsou pro nás důležité. Proto je celý náš byt striktně nekuřácký, aby se zde každý cítil svěže a bez cigaretového kouře.",
+    icon: "ic:outline-smoke-free",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Apartmán v Krkonoších - Černý Důl
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Vítejte v našem horském útočišti v Černém Dole!
+  </p>
+  <hr>
+  <p> Apartmán v Krkonoších - Černý Důl se nachází v Černém Dole, pouhých 15 km od autobusové zastávky Strážné, a nabízí ubytování s výhledem na hory, bezplatné Wi-Fi a neplacené soukromé parkoviště. V okolí se můžete věnovat lyžování, cyklistice a pěší turistice.</p><br>
+
+  <p>Apartmán má 2 ložnice, TV s plochou obrazovkou a streamovacími službami a plně vybavenou kuchyň s myčkou nádobí, sporákem, pračkou, mikrovlnnou troubou a toustovačem. Ložní prádlo a ručníky jsou zajištěny.</p><br>
+
+  <p>Na místě je prostor pro piknik. Apartmán v Krkonoších - Černý Důl má sluneční terasu, zahradu a lyžárnu.</p><br>
+
+  <p>Ubytování je vzdálené 45 km od Babiččina údolí a 48 km od zábavního parku Western City. Letiště Pardubice leží od Apartmánu v Krkonoších - Černý Důl 88 km.</p><br>
+
+
   </p>
 </div>
+<hr>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
@@ -67,3 +79,4 @@ const features = [
     ))
   }
 </div>
+  <Contact>
