@@ -4,30 +4,31 @@ import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon";
 ---
-    <Sectionhead>
-      <Fragment slot="title">Neváhejte nás kontaktovat</Fragment>
-      <Fragment slot="desc">Majitel</Fragment>
-    </Sectionhead>
 
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-      <div>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:smile" />
-            <span>Pavel Puczek</span>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>Čistá v Krkonoších 142, 543 44 Černý Důl</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com"
-              >XXX</a>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+420 777 260 039</a
-            >
-          </div>
-        </div>
+<Sectionhead id="contact">
+  <Fragment slot="title">Neváhejte nás kontaktovat</Fragment>
+  <Fragment slot="desc">Majitel</Fragment>
+</Sectionhead>
+
+<div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+  <div>
+    <div class="mt-5">
+      <div class="flex items-center mt-2 space-x-2 text-gray-600">
+        <Icon class="text-gray-400 w-4 h-4" name="uil:smile" />
+        <span>Pavel Puczek</span>
+      </div>
+      <div class="flex items-center mt-2 space-x-2 text-gray-600">
+        <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+        <span>Čistá v Krkonoších 142, 543 44 Černý Důl</span>
+      </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+        <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+          href="mailto:hello@astroshipstarter.com">XXX</a
+        >
+      </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+        <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+          href="tel:+1 (987) 4587 899">+420 777 260 039</a
+        >
       </div>
     </div>
+  </div>
+</div>
