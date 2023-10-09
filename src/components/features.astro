@@ -1,6 +1,4 @@
 ---
-// @ts-ignore
-import Contact from "@pages/contact.astro";
 import { Icon } from "astro-icon";
 
 const features = [
@@ -43,40 +41,49 @@ const features = [
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Apartmán v Krkonoších - Černý Důl
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Vítejte v našem horském útočišti v Černém Dole!
-  </p>
-  <hr>
-  <p> Apartmán v Krkonoších - Černý Důl se nachází v Černém Dole, pouhých 15 km od autobusové zastávky Strážné, a nabízí ubytování s výhledem na hory, bezplatné Wi-Fi a neplacené soukromé parkoviště. V okolí se můžete věnovat lyžování, cyklistice a pěší turistice.</p><br>
-
-  <p>Apartmán má 2 ložnice, TV s plochou obrazovkou a streamovacími službami a plně vybavenou kuchyň s myčkou nádobí, sporákem, pračkou, mikrovlnnou troubou a toustovačem. Ložní prádlo a ručníky jsou zajištěny.</p><br>
-
-  <p>Na místě je prostor pro piknik. Apartmán v Krkonoších - Černý Důl má sluneční terasu, zahradu a lyžárnu.</p><br>
-
-  <p>Ubytování je vzdálené 45 km od Babiččina údolí a 48 km od zábavního parku Western City. Letiště Pardubice leží od Apartmánu v Krkonoších - Černý Důl 88 km.</p><br>
-
-
-  </p>
-</div>
-<hr>
-
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+<div class="mt-16">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-16">
+    {
+      features.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
+
+  <hr class="my-16" />
+
+  <h3 class="font-semibold text-lg mb-4">Popis</h3>
+ 
+  <p>
+    Apartmán v Krkonoších - Černý Důl se nachází v Černém Dole, pouhých 15 km od
+    autobusové zastávky Strážné, a nabízí ubytování s výhledem na hory,
+    bezplatné Wi-Fi a neplacené soukromé parkoviště. V okolí se můžete věnovat
+    lyžování, cyklistice a pěší turistice.
+  </p><br />
+
+  <p>
+    Apartmán má 2 ložnice, TV s plochou obrazovkou a streamovacími službami a
+    plně vybavenou kuchyň s myčkou nádobí, sporákem, pračkou, mikrovlnnou
+    troubou a toustovačem. Ložní prádlo a ručníky jsou zajištěny.
+  </p><br />
+
+  <p>
+    Na místě je prostor pro piknik. Apartmán v Krkonoších - Černý Důl má
+    sluneční terasu, zahradu a lyžárnu.
+  </p><br />
+
+  <p>
+    Ubytování je vzdálené 45 km od Babiččina údolí a 48 km od zábavního parku
+    Western City. Letiště Pardubice leží od Apartmánu v Krkonoších - Černý Důl
+    88 km.
+  </p><br />
 </div>
-  <Contact>
+

@@ -1,14 +1,72 @@
 ---
 import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
+import { Image } from "astro:assets";
 import Features from "@components/features.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import Contact from "@pages/contact.astro";
 ---
 
 <Layout title="Apartmán v Krkonoších - Černý Důl">
+  <div class:list={["max-w-screen-2xl mx-auto mt-16 mb:mt-4"]}>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Apartmán v Krkonoších - Černý Důl
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      Vítejte v našem horském útočišti v Černém Dole!
+    </p>
+  
+    <hr />
+
+    <div class="grid grid-cols-2 gap-4 py-16">
+      <div>
+        <Image
+          src={"/images/apartman/404707405.jpg"}
+          alt={""}
+          format="avif"
+          width={760}
+          height={865}
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="grid gap-4">
+        <div>
+          <Image
+            src={"/images/apartman/404707121.jpg"}
+            alt={""}
+            format="avif"
+            width={462}
+            height={492}
+            class="w-full h-auto"
+          />
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <Image
+              src={"/images/apartman/404707087.jpg"}
+              alt={""}
+              format="avif"
+              width={372}
+              height={279}
+              class="w-full h-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={"/images/apartman/404706215.jpg"}
+              alt={""}
+              format="avif"
+              width={372}
+              height={279}  
+              class="w-full h-auto max-h-[279px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <Container>
     <Features />
+    <Contact />
   </Container>
 </Layout>
