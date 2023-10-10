@@ -4,19 +4,23 @@ import { Image } from "astro:assets";
 import Features from "@components/features.astro";
 import Layout from "@layouts/Layout.astro";
 import Contact from "@pages/contact.astro";
+import Gallery from "@components/gallery.astro";
+import { GoogleMapComponent } from "@components/googlemap";
 ---
 
 <Layout title="Apartmán v Krkonoších - Černý Důl">
-  <div class:list={["max-w-screen-2xl mx-auto mt-16 mb:mt-4"]}>
+  <Container class:list={["mt-16 mb:mt-4"]}>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       Apartmán v Krkonoších - Černý Důl
     </h2>
     <p class="text-lg mt-4 text-slate-600">
       Vítejte v našem horském útočišti v Černém Dole!
     </p>
-  
-    <hr />
 
+    <hr />
+  </Container>
+
+  <div class:list={["max-w-screen-2xl mx-auto"]}>
     <div class="grid grid-cols-2 gap-4 py-16">
       <div>
         <Image
@@ -47,7 +51,7 @@ import Contact from "@pages/contact.astro";
               format="avif"
               width={372}
               height={279}
-              class="w-full h-auto"
+              class="w-full h-full object-cover"
             />
           </div>
           <div>
@@ -56,7 +60,7 @@ import Contact from "@pages/contact.astro";
               alt={""}
               format="avif"
               width={372}
-              height={279}  
+              height={279}
               class="w-full h-auto max-h-[279px] object-cover"
             />
           </div>
@@ -67,6 +71,8 @@ import Contact from "@pages/contact.astro";
 
   <Container>
     <Features />
+    <GoogleMapComponent client:visible />
+    <Gallery />
     <Contact />
   </Container>
 </Layout>
