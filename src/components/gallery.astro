@@ -1,0 +1,30 @@
+---
+import Lightbox from "./lightbox.astro";
+
+const folder = "apartman";
+
+const imageFiles = import.meta.glob<ImageMetadata>(
+  "../../public/images/apartman/**/*.{png,webp,jpg,jpeg}",
+  {
+    import: "default",
+    eager: true,
+  },
+);
+
+const folderFiles = Object.keys(imageFiles).filter(
+  (image) => image.search(folder) >= 0,
+);
+
+const imageSrcs = folderFiles.map((image) => imageFiles[image]);
+const gallery = "gallery-" + folder;
+---
+
+<h3
+  id="our-rooms"
+  class="text-3xl lg:text-4xl font-bold lg:tracking-tight mb-6">
+  Naše pokoje
+</h3>
+
+<section id={gallery} class="columns-2 md:columns-3 lg:columns-4">
+  <Lightbox id={gallery} images={imageSrcs} />
+</section>
